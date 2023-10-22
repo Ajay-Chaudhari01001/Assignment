@@ -1,0 +1,37 @@
+.tab-section {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-direction: row;
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        border: none;
+        background: none;
+        text-decoration: none;
+        color: var(--para2);
+        transition: background-color 0.2s;
+
+        &.active {
+            border-bottom: 3px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+    }
+}
+
+.tab-content {
+    margin-top: 1rem;
+    .tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

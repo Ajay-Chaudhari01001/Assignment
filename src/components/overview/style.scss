@@ -1,0 +1,137 @@
+@import "../../mixins.scss";
+
+.overview-container {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 80vw;
+    border-radius: .8rem;
+
+    .card {
+        width: 350px;
+        height: 170px;
+        background-color: white;
+        padding: 1rem;
+        border-radius: .8rem;
+        box-shadow: 0px 4px 4px 0px #00000026;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .title {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--para1);
+        }
+        .list {
+            p{
+                margin-bottom: .5rem;
+                color: var(--para1);
+            }
+        }
+    }
+
+
+    .first-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .first-row-card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: .8rem;
+            box-shadow: 0px 4px 4px 0px #00000026;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 360px;
+            height: 200px;
+
+            .title {
+                font-size: 1rem;
+                color: var(--para1);
+            }
+
+            .follower-percent {
+                font-size: 2rem;
+                color: black;
+                margin-top: 1rem;
+            }
+
+            p {
+                font-size: .9rem;
+                color: var(--para1);
+            }
+
+            .percent {
+                color: black;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+            .score-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: .5rem;
+
+                .score {
+                    border: 2px solid var(--para1);
+                    border-radius: 12px;
+                    padding: 8px 5px;
+                    font-size: .8rem;
+                }
+            }
+
+            .logo-box {
+                display: flex;
+                gap: 1rem;
+
+                .logo {
+                    display: flex;
+                    margin-top: 1rem;
+                    gap: .5rem;
+
+                    p {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .second-row {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 80vw;
+        border-radius: .8rem;
+        flex-wrap: wrap;
+
+    }
+}
+
+h2{
+    margin-top: 1rem;
+    color: var(--para2);
+    font-weight: 400;
+}
+
+@include md {
+    .overview-container {
+        margin:1.5rem auto 0 auto;
+        width: 95vw;
+    }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,600;1,800&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import "./mixins.scss";
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --para2: #818181;
+    --para1: #94A2B3;
+    --green: #219653;
+    --blue-shade: #E2EDFC;
+    --primary-blue: #007DFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: var(--black);
+}
+
+@include md {
+    html {
+        font-size: 60%;
+    }
+}

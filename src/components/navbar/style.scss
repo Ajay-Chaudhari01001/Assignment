@@ -1,0 +1,89 @@
+@import "../../mixins.scss";
+
+.navbar {
+    padding: 1rem;
+    position: relative;
+
+    .menu-items {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 1rem;
+
+        .menu {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+            }
+
+        }
+
+        .menu_icon {
+            display: none;
+            width: 25px;
+        }
+    }
+
+    // Apply styles for medium (md) screens and smaller
+    @include md {
+        .menu-card {
+            display: block;
+            transition: .3s ease;
+        }
+
+        .menu-items {
+            .menu {
+                display: none;
+            }
+
+            .menu_icon {
+                display: block;
+                transition: .3s ease;
+            }
+        }
+
+        // Add styles for the open menu icon
+        .menu_icon.open {
+            // transition: .3s ease;
+            transform: rotate(90deg);
+        }
+    }
+
+    .menu-card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .8rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        position: absolute;
+        top: 60px;
+        right: 5px;
+        background: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        .menu-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .8rem;
+        }
+
+        // Add additional styles for the menu card
+        img {
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+    }
+}

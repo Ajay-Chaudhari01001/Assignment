@@ -1,0 +1,163 @@
+@import "../../mixins.scss";
+
+.profile-content {
+    position: relative;
+    border-radius: .8rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: .5rem;
+
+    img {
+        border-radius: .8rem;
+    }
+
+    .tick {
+        position: absolute;
+        top: 20px;
+        left: 245px;
+    }
+
+    .info {
+        .name_info {
+            display: flex;
+            gap: 2rem;
+            
+            .address-data {
+             display: flex;
+             gap: 1.5rem;
+            .social_icons {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .address {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+
+                .location {
+                    display: flex;
+                    align-items: center;
+                }
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        }
+
+        .data {
+            padding: .8rem 0;
+            color: var(--para1);
+
+            .data_name {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+                width: 55vw;
+                line-height: 1.3rem;
+            }
+        }
+
+        .button {
+            width: 60vw;
+            display: flex;
+            justify-content: space-between;
+
+            .buttons {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .btn {
+                    border: 1px solid var(--para1);
+                    padding: .8rem;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                }
+
+                .tag {
+                    padding: .5rem .7rem;
+                }
+            }
+
+            .grade {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+
+                .score {
+                    padding: .3rem 0;
+                    background-color: var(--green);
+                    border-radius: .5rem;
+                    color: white;
+                    font-size: .8rem;
+                    text-align: center;
+                }
+
+                .total {
+                    text-align: center;
+                }
+
+                p {
+                    color: var(--green);
+                    margin-block: .3rem;
+                }
+
+                .quality {
+                    color: var(--para1);
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}
+
+@include md {
+    .profile-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .info {
+            .name_info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: .5rem;
+            }
+            .data {
+                .data_name {
+                    width: 90vw;
+                }
+            }
+            .button {
+                width: 90vw;
+            }
+        }
+    }
+}
+
+@include sm{
+    .profile-content {
+        .info {
+            .button{
+                width: 95vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "../../mixins.scss";
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  padding: 1rem;
+  background-color: #fff;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block: 2rem;
+
+    .menu-item {
+      display: flex;
+      gap: 1.4rem;
+      align-items: center;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .terms {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    p {
+      color: var(--para2);
+    }
+  }
+
+}
+
+// Use media query for responsive behavior
+@include md {
+  .sidebar {
+    transform: translateX(-200px);
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .show-sidebar {
+    transform: translateX(0);
+    margin-top: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 900;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import "../../mixins.scss";
+
+.card_container {
+    margin-top: 1.5rem;
+    background-color: var(--blue-shade);
+    padding: .8rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80vw;
+    border-radius: .8rem;
+    flex-wrap: wrap;
+
+    .card {
+        background-color: white;
+        padding: 1rem;
+        border-radius: .8rem;
+        box-shadow: 0px 4px 4px 0px #00000026;
+        width: 350px;
+        height: 165px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .title {
+            color: var(--para1);
+            text-align: center;
+
+            .score {
+                margin-top: .5rem;
+            }
+
+            .score2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 25px;
+                }
+            }
+        }
+
+        .score {
+            span {
+                color: var(--para1);
+                font-size: .5rem;
+            }
+        }
+
+        .circle {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .progress-container {
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-radius: 50%;
+            position: relative;
+
+            .image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                img {
+                    width: 20px;
+                }
+            }
+
+        }
+
+        .image2 {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            img {
+                width: 25px;
+                margin-top: .2rem;
+            }
+
+            p {
+                color: var(--para1);
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+    .card3 {
+        position: relative;
+
+        .image {
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-size: .8rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .followers {
+            color: var(--para1);
+            font-size: .7rem;
+        }
+
+        .facebook {
+            position: absolute;
+            bottom: 30px;
+            left: 35px;
+
+            p {
+                color: #4B6188;
+            }
+        }
+
+        .twitter {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+
+            p {
+                color: #1DA1F2;
+            }
+        }
+
+        .instagram {
+            position: absolute;
+            bottom: 20px;
+            right: 35px;
+
+            p {
+                color: #F087B1;
+            }
+        }
+    }
+}
+
+.social-icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 81vw;
+    margin-top: 1rem;
+    gap: 1rem;
+    cursor: pointer;
+
+    img{
+        width: 25px;
+    }
+
+    .icon{
+        border: 2px solid var(--para1);
+        border-radius: .5rem;
+        padding: .5rem;
+    }
+}
+
+@include md{
+    .card_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+@include sm{
+    .card_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto 0 auto;
+        width: 90vw;
+        padding: .5rem;
+    }
+}
